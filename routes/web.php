@@ -149,6 +149,10 @@ Route::get ('pesanan',function(){
 Route::get ('supplier',function(){
     $query =App\Models\supplier::all();
     return  $query;
+Route::get ('data-siswa',[MyController::class, 'index']);
+Route::get ('posts',[MyController::class,'posting']);
+Route::get ('pembeli',[MyController::class,'pembeli']);
+Route::get('pembelian/{id}',[MyController::class,'singlepembelian']);
 });
 //jalankan server laravel -> php artisan serve
 //akses localhost :8000/tentang
